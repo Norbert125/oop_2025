@@ -1,33 +1,40 @@
 package Lab4_2;
 
+import java.util.ArrayList;
+
 public class Customer {
     private String firstName, lastName;
-    private BankAccount account;
-
+    private ArrayList<BankAccount> accounts = new ArrayList<>();
     public Customer(String firstName, String lastName){
         this.firstName = firstName;
         this.lastName = lastName;
     }
 
-    public String toString(){
-        return "Customer{" + firstName + " " + lastName + " " + account + "}";
+    @Override
+    public String toString() {
+        return "Customer{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", accounts=" + accounts +
+                '}';
     }
 
-    public void setAccount(BankAccount account){
-        this.account = account;
+    public void addAccount(BankAccount account){
+        //if(accounts.size() >= ) {return;}
+        accounts.add(account);
     }
-
-    public void closeAccount(){
-        this.account = null;
+    public BankAccount getAccount(String accountNumber) {
+        for (int i = 0; i < accounts.size(); i++) {
+            if(accounts.get(i).equals(accountNumber)){
+                return accounts.get(i);
+            }
+        }
+        return null;
     }
-
-    public BankAccount getAccount() {
-        return account;
-    }
-
     public String getFirstName(){return firstName;}
     public String getLastName(){return lastName;}
     public void setLastName(String lastName){
         this.lastName = lastName;
     }
+
 }

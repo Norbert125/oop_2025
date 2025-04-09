@@ -15,10 +15,10 @@ public class Main {
         customer1.addAccount(savingsAccount1);
         customer2.addAccount(checkingAccount2);
         customer2.addAccount(savingsAccount2);
-        customer1.getAccount(savingsAccount1.).deposit(100);
-        customer1.getAccount(checkingAccount1.accountNumber).deposit(200);
-        customer2.getAccount(savingsAccount1.accountNumber).deposit(300);
-        customer2.getAccount(checkingAccount2.accountNumber).deposit(400);
+        customer1.getAccount(customer1.getAccountNumbers().get(0)).deposit(100);
+        customer1.getAccount(customer1.getAccountNumbers().get(1)).deposit(200);
+        customer2.getAccount(customer2.getAccountNumbers().get(0)).deposit(300);
+        customer2.getAccount(customer2.getAccountNumbers().get(1)).deposit(400);
 
         System.out.println(customer1);
         System.out.println(customer2);

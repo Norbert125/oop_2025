@@ -9,8 +9,8 @@ public class Main {
         myBank.addCustomer(customer2);
         CheckingAccount checkingAccount1 = new CheckingAccount(1000);
         CheckingAccount checkingAccount2 = new CheckingAccount(1000);
-        SavingsAccount savingsAccount1 = new SavingsAccount(0.25);
-        SavingsAccount savingsAccount2 = new SavingsAccount(0.25);
+        SavingsAccount savingsAccount1 = new SavingsAccount(1.5);
+        SavingsAccount savingsAccount2 = new SavingsAccount(1.5);
         customer1.addAccount(checkingAccount1);
         customer1.addAccount(savingsAccount1);
         customer2.addAccount(checkingAccount2);
@@ -19,7 +19,16 @@ public class Main {
         customer1.getAccount(customer1.getAccountNumbers().get(1)).deposit(200);
         customer2.getAccount(customer2.getAccountNumbers().get(0)).deposit(300);
         customer2.getAccount(customer2.getAccountNumbers().get(1)).deposit(400);
-
+        System.out.println(customer1);
+        System.out.println(customer2);
+        savingsAccount1.addInterest();
+        System.out.println(customer1);
+        if (!customer1.getAccount(customer1.getAccountNumbers().get(1)).withdraw(500)){
+            System.out.println("Invalid funds!");
+        }
+        if(!customer2.getAccount(customer2.getAccountNumbers().get(1)).withdraw(500)){
+            System.out.println("Invalid funds!");
+        }
         System.out.println(customer1);
         System.out.println(customer2);
     }

@@ -14,14 +14,14 @@ public class SavingsAccount extends BankAccount {
     public void setInterestRate(double interestRate) {
         this.interestRate = interestRate;
     }
-    public void addInterest( double intRate){
-        interestRate += intRate;
+    public void addInterest(){
+        super.balance = interestRate * super.balance;
     }
 
     @Override
     public String toString() {
         return "SavingsAccount{" +
                 "interestRate=" + interestRate +
-                '}';
+                " balance= " + super.getBalance() + '}';
     }
 }

@@ -1,8 +1,8 @@
 package lab2_3;
 
-public class Date {
+public class MyDate {
     private int year, month, day;
-    public Date (int year, int month, int day) {
+    public MyDate(int year, int month, int day) {
         this.year = year;
         this.month = month;
         this.day = day;

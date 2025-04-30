@@ -1,0 +1,2 @@
+Manager{birthDate=Date{2000, 9, 25}, salary=3100.0, lastName='Zsolt-Tamas', firstName='Incze', ID=2, department='WebDev'}
+Manager{birthDate=Date{2000, 5, 3}, salary=3500.0, lastName='Hunor', firstName='Burszan', ID=10, department='MobileDev'}
